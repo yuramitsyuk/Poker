@@ -11,12 +11,12 @@ public class Poker {
         System.out.println("Input 5 cadrs (Separate spaces, any register): ");
         Scanner input=new Scanner(System.in);
         String str=input.nextLine().toLowerCase();
-        String [] array=str.split(" ");
+        String [] strArray=str.split(" ");
         Integer count=0;
 
-        Integer [] array1=transform(array);
+        Integer [] intArray=transform(strArray);
 
-        List<Integer> list=Arrays.asList(array1);
+        List<Integer> list=Arrays.asList(intArray);
         HashMap<Integer, Integer> hashmap = new HashMap<Integer, Integer>();
         for (Integer i : list) {
 
@@ -31,7 +31,7 @@ public class Poker {
             }
         }
 
-        if (isStraight(array1)){
+        if (isStraight(intArray)){
             System.out.println("Straight");
         }
         if (hashmap.size()==1&hashmap.values().contains(2)){
